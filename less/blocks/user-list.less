@@ -1,0 +1,104 @@
+.user-list {
+    .no-list-style();
+    background-color: #826550;
+}
+
+.user-list__item-link {
+    position: relative;
+    display: block;
+    padding: 17px 21px;
+    padding-left: 49px;
+    line-height: 18px;
+    color: #ffffff;
+}
+.user-list__login-icon {
+    position: absolute;
+    top: 17px;
+    left: 21px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
+    fill: #ffffff;
+}
+.user-list__item-link[href] {
+    &:hover,
+    &:focus {
+        background: #755a46;
+        border-top-color: #755a46;
+    }
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background: #6a4d38;
+        border-top-color: #6a4d38;
+    }
+}
+@media (min-width: @tablet-width)  {
+    .user-list {
+        width: 60px;
+        background: none;
+    }
+    .user-list__item-link {
+        width: 60px;
+        min-height: 71px;
+        padding: 0;
+        font-size: 0;
+
+        &:hover .user-list__login-icon {
+            opacity: 1;
+            fill: #826550;
+        }
+        &:active .user-list__login-icon {
+            opacity: 0.3;
+            fill: #ffffff;
+        }
+    }
+    .user-list__item .user-list__item-link {
+        &:hover,
+        &:focus {
+            background: #000000;
+        }
+    }
+    .user-list__login-icon {
+        top: 29px;
+        left: 12px;
+    }
+}
+@media (min-width: @desktop-width)  {
+    .user-list {
+        width: auto;
+        max-width: 160px;;
+    }
+    .user-list__item .user-list__item-link {
+        width: auto;
+        height: auto;
+        min-height: auto;
+        padding: 25px 30px 23px 50px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            color: #000000;
+            background: #ffffff;
+        }
+        &:active {
+            color: rgba(0, 0, 0, 0.3);
+            background: #ffffff;
+        }
+        &:hover .user-list__login-icon {
+            opacity: 0.3;
+            fill: #000000;
+        }
+        &:focus .user-list__login-icon {
+            fill: #000000;
+        }
+        &:active .user-list__login-icon {
+            opacity: 0.1;
+        }
+    }
+    .user-list__login-icon {
+        left: 15px;
+    }
+}

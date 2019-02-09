@@ -1,0 +1,50 @@
+@font-face {
+    font-weight: normal;
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    src: url("../fonts/ptsans-narrow-webfont.woff2") format("woff2"),
+         url("../fonts/ptsansnarrow.woff") format("woff");
+}
+
+@font-face {
+    font-weight: bold;
+    font-family: "PT Sans Narrow";
+    src: url("../fonts/ptsans-narrowbold-webfont.woff2") format("woff2"),
+         url("../fonts/ptsansnarrowbold.woff") format("woff");
+    font-style: normal;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: #f7f4f1;
+    font-style: normal;
+    background-color: @bg-darkgrey;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.visually-hidden:not(:focus):not(:active) {
+// input[type="checkbox"].visually-hidden,
+// input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+    height: 1px;
+    margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}

@@ -1,0 +1,45 @@
+.page-header__logo {
+    display: block;
+    width: 60%;
+    min-width: 320px;
+    height: 85px;
+    margin: 0 auto;
+    padding-top: 29px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #242424;
+}
+.page-header__logo-image {
+    width: 226px;
+}
+@media (min-width: @tablet-width) {
+    .page-header {
+        display: flex;
+        flex-direction: column;
+        background-color: #000000;
+    }
+    .page-header__logo {
+        width: 100%;
+        order: 2;
+        min-height: 400px;
+        background: url("../../img/bg-desktop-inner.jpg") no-repeat top center;
+        background-size: 1300px 450px;
+    }
+    .page-header__logo-image {
+        display: block;
+        width: 370px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+@media (min-width: @desktop-width) {
+    .page-header__logo {
+        min-height: 650px;
+    }
+    .page-header__logo {
+        background-size: cover;
+    }
+    .page-header__logo-image {
+        margin-top: 57px;
+    }
+}
