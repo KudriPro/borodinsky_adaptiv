@@ -1,0 +1,28 @@
+.slider__input {
+    display: none;
+}
+.slider__item {
+    border: none;
+    outline: none;
+}
+.slider__toggle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin-right: 20px;
+    font-size: 0;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+.slider__toggles {
+    text-align: center;
+}
+@media (min-width: @tablet-width) {
+    .slider__toggles {
+        display: none;
+    }
+}

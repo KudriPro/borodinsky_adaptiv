@@ -7,6 +7,8 @@
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	</head>
 	<body>
 		<header class="page-header">
@@ -58,49 +60,52 @@
 				<table class="stats__list">
 					<tr>
 						<td class="stats__value">1 500<sup>*</sup></td>
-						<td class="stats__field">рублей<br>вложений</td>
+						<td class="stats__field">рублей<br> вложений</td>
 					</tr>
 					<tr>
 						<td class="stats__value">7 200</td>
-						<td class="stats__field">секунд<br>времени&nbsp;мастера</td>
+						<td class="stats__field">секунд<br> времени&nbsp;мастера</td>
 					</tr>
 					<tr>
 						<td class="stats__value">90 000</td>
-						<td class="stats__field">постриженных<br>волос</td>
+						<td class="stats__field">постриженных<br> волос</td>
 					</tr>
 					<tr>
 						<td class="stats__value">500&nbsp;000<sup>*</sup></td>
-						<td class="stats__field">лайков и<br>комплиментов</td>
-					</tr>
+						<td class="stats__field">лайков и<br> комплиментов</td>
+                    </tr>
 				</table>
 				<small class="stats__legend stats__legend--bottom">
 					<sup>*</sup> - приведенные данные правда
 				</small>
 			</section>
 
-			<section class="adventages">
-				<div class="adventages__wrapper slider">
-					<h2 class="visually-hidden">Наши преимущества</h2>
-					<ul class="adventages__list slider__list">
-						<li class="adventages__item adventages__item--fast slider__item">
-							<h3 class="adventages__title">Быстро</h3>
-							<p class="adventages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+			<section class="advantages">
+				<div class="advantages__wrapper slider">
+                    <h2 class="visually-hidden">Наши преимущества</h2>
+                    <input class="slider__input" type="radio" name="advantages" id="advantages-input-1" checked>
+                    <input class="slider__input" type="radio" name="advantages" id="advantages-input-2">
+                    <input class="slider__input" type="radio" name="advantages" id="advantages-input-3">
+					<ul class="advantages__list slider__list">
+						<li class="advantages__item advantages__item--fast slider__item">
+							<h3 class="advantages__title">Быстро</h3>
+							<p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
 						</li>
-						<li class="adventages__item adventages__item--coll slider__item">
-							<h3 class="adventages__title">Круто</h3>
-							<p class="adventages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+						<li class="advantages__item advantages__item--coll slider__item">
+							<h3 class="advantages__title">Круто</h3>
+							<p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
 						</li>
-						<li class="adventages__item adventages__item--price slider__item">
-							<h3 class="adventages__title">Дорого</h3>
-							<p class="adventages__description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+						<li class="advantages__item advantages__item--price slider__item">
+							<h3 class="advantages__title">Дорого</h3>
+							<p class="advantages__description">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
 						</li>
 					</ul>
-					<div class="adventages__toggles slider__toggles">
-						<button class="slider__toggle" type="button">1</button>
-						<button class="slider__toggle" type="button">2</button>
-						<button class="slider__toggle" type="button">3</button>
+					<div class="advantages__toggles slider__toggles">
+						<label class="slider__toggle" for="advantages-input-1">1</label>
+						<label class="slider__toggle" for="advantages-input-2">2</label>
+						<label class="slider__toggle" for="advantages-input-3">3</label>
 					</div>
-				</div>
+                </div>
 			</section>
 
 			<section class="news">
@@ -108,22 +113,28 @@
 					<h2 class="news__title">Новости и акции</h2>
 					<ul class="news__list">
 						<li class="news__item">
-							<time class="news__date" datetime="2017-09-29">
-								<b class="news__day">29 сент</b>
-							</time>
-							<p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+                            <a href="" class="news__item-wrapper">
+                                <time class="news__date" datetime="2017-09-29">
+                                    <b class="news__day">29</b><br> сент
+                                </time>
+                                <p class="news__text">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.</p>
+                            </a>
 						</li>
 						<li class="news__item">
-							<time class="news__date" datetime="2017-09-19">
-								<b class="news__day">19 сент</b>
-							</time>
-							<p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+                            <a href="" class="news__item-wrapper">
+                                <time class="news__date" datetime="2017-09-19">
+                                    <b class="news__day">19</b><br> сент
+                                </time>
+                                <p class="news__text">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</p>
+                            </a>
 						</li>
 						<li class="news__item">
-							<time class="news__date" datetime="2017-09-09">
-								<b class="news__day">9 сент</b>
-							</time>
-							<p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+                            <a href="" class="news__item-wrapper">
+                                <time class="news__date" datetime="2017-09-09">
+                                    <b class="news__day">9</b><br> сент
+                                </time>
+                                <p class="news__text">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</p>
+                            </a>
 						</li>
 					</ul>
 					<a class="news__to-all btn" href="#">Показать все</a>
@@ -173,6 +184,32 @@
                 navMain.classList.add("main-nav--closed");
                 navMain.classList.remove("main-nav--opened");
 
+            }
+            });
+        </script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <!-- <script type="text/javascript">
+              $('.advantages__list').slick({
+                arrows: false,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: "unslick"
+                    }
+                ]
+              });
+        </script> -->
+        <script type="text/javascript">
+            $(window).on('load resize', function() {
+            if ($(window).width() < 767) {
+                $('.advantages__list:not(.slick-initialized)').slick({
+                    arrows: false,
+                    dots: true
+                });
+            } else {
+                $(".advantages__list.slick-initialized").slick("unslick");
             }
             });
         </script>
