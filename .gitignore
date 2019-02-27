@@ -8,7 +8,7 @@
 # css/*.css
 node_modules/
 npm-debug.*
-sourse/css/*.css
+# sourse/css/*.css
 build/
 slick/
 Thumbs.db
