@@ -22,8 +22,13 @@
         width: 100%;
         order: 2;
         min-height: 400px;
-        background: url("../../img/bg-desktop-inner.jpg") no-repeat top center;
-        background-size: 1300px 450px;
+        background: url("../../img/back-tablet1338.jpg") no-repeat top center;
+        // background-size: 1300px 450px;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+            background-image: url("../../img/bg-desktop-inner.jpg");
+            background-size: 1338px auto;
+        }
     }
     .page-header__logo-image {
         display: block;

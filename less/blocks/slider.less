@@ -1,7 +1,12 @@
-.slider__input {
+.slider__input-1,
+.slider__input-2,
+.slider__input-3 {
     display: none;
 }
-.slider__item {
+.slider__item-1,
+.slider__item-2,
+.slider__item-3 {
+    display: none;
     border: none;
     outline: none;
 }
@@ -12,17 +17,25 @@
     height: 6px;
     margin-right: 20px;
     font-size: 0;
-    background: transparent;
+    background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
     transform: rotate(45deg);
     cursor: pointer;
     transition: background-color 0.2s linear;
 }
+.slider__toggle:last-child {
+    margin-right: 0;
+}
 .slider__toggles {
     text-align: center;
 }
-@media (min-width: @tablet-width) {
-    .slider__toggles {
-        display: none;
-    }
+.slider__input-1:checked ~ .slider__toggles .slider__toggle-1,
+.slider__input-2:checked ~ .slider__toggles .slider__toggle-2,
+.slider__input-3:checked ~ .slider__toggles .slider__toggle-3 {
+    background: #ffffff;
+}
+.slider__input-1:checked ~ .slider__list .slider__item-1,
+.slider__input-2:checked ~ .slider__list .slider__item-2,
+.slider__input-3:checked ~ .slider__list .slider__item-3 {
+    display: block;
 }

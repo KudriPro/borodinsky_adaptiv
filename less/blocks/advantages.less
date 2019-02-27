@@ -6,7 +6,6 @@
     margin: 0 auto;
     padding-right: 20px;
     padding-left: 20px;
-    outline: 1px solid red;
     background: #242424;
     box-sizing: border-box;
 
@@ -81,18 +80,10 @@
     }
 }
 @media (max-width: @mobile-width-only) {
-    .advantages__item {
-        display: none;
-    }
     #advantages-input-1:checked ~ .advantages__toggles label[for="advantages-input-1"],
     #advantages-input-2:checked ~ .advantages__toggles label[for="advantages-input-2"],
     #advantages-input-3:checked ~ .advantages__toggles label[for="advantages-input-3"] {
         background-color: #ffffff;
-    }
-    #advantages-input-1:checked ~ .advantages__list .advantages__item--fast,
-    #advantages-input-2:checked ~ .advantages__list .advantages__item--coll,
-    #advantages-input-3:checked ~ .advantages__list .advantages__item--price {
-        display: block;
     }
     .advantages__toggles {
         position: absolute;
@@ -121,7 +112,7 @@
         transform: rotate(45deg);
         background: transparent;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        color: none;
+        color: rgba(255, 255, 255, 0);
         opacity: 1;
         z-index: 10;
         transition: background-color 0.2s linear;
@@ -131,6 +122,9 @@
     }
 }
 @media (min-width: @tablet-width) {
+    .advantages__toggles {
+        display: none;
+    }
     .advantages {
         width: auto;
         background-color: #353535;
@@ -151,7 +145,8 @@
         margin-bottom: 14px;
         text-align: left;
     }
-    .advantages__item {
+    .advantages__list .advantages__item {
+        display: block;
         padding-left: 154px;
 
         &::before {
@@ -174,7 +169,6 @@
 @media (min-width: @desktop-width) {
     .advantages__wrapper {
         width: 960px;
-        outline: 1px solid red;
     }
     .advantages {
 
@@ -194,14 +188,14 @@
     .advantages__list .advantages__item {
         padding-left: 0;
         border-bottom: none;
-    }
-    .advantages__item {
-        padding-left: 40px;
-        padding-right: 40px;
         &::before {
             left: 45%;
             // transform: translateX(-50%);
         }
+    }
+    .advantages__item {
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .advantages__title {
         text-align: center;
