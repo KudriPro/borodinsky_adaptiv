@@ -10,5 +10,5 @@ node_modules/
 npm-debug.*
 # sourse/css/*.css
 build/
-slick/
+# slick/
 Thumbs.db

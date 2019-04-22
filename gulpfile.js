@@ -2,12 +2,20 @@
 
 var gulp = require("gulp");
 var less = require("gulp-less");
+/*POSTCSS делает автопрефиксы*/
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
 gulp.task("less", function () {
     return gulp.src("less/style.less")
         .pipe(less())
-        .pipe(gulp.dest("css"))
+        .pipe(postcss([
+            autoprefixer({browsers: [
+              "last 2 versions"
+            ]}),
+          ]))
+        .pipe(gulp.dest("css/css"))
         .pipe(server.stream());
   });
 

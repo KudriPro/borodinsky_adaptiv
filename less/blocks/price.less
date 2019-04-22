@@ -1,0 +1,202 @@
+.price {
+    position: relative;
+    width: 60%;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #353535;
+
+    &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        height: 35px;
+        width: 100%;
+        background: url("../../img//corner-photo.svg") no-repeat;
+        background-size: 100% 35px;
+        transform: rotate(180deg);
+    }
+}
+.price__wrapper {
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 57px;
+    padding-bottom: 10px;
+}
+.price__heading {
+    margin: 0;
+    margin-bottom: 22px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+.price__list {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.35;
+
+    & tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.price__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.price__wash-service {
+    position: relative;
+    display: block;
+    order: 1;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-left: 4px;
+}
+.price__number-service {
+    display: none;
+}
+.price__name-service {
+    flex-grow: 3;
+    font-weight: bold;
+}
+.price__price-service {
+    flex-grow: 1;
+    text-align: right;
+}
+.price__discount {
+    position: relative;
+    margin: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 100px;
+    padding-right: 10px;
+    min-height: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.35;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 58px;
+        height: 57px;
+        left: 20px;
+        top: 15px;
+        background: url("../../img/clock illustration.svg") no-repeat;
+    }
+}
+@media (min-width: @tablet-width) {
+    .price {
+        width: auto;
+
+        &::after {
+            display: none;
+        }
+    }
+    .price__wrapper {
+        width: 640px;
+        padding-top: 87px;
+        padding-bottom: 55px;
+    }
+    .price__heading {
+        margin-bottom: 44px;
+        font-size: 40px;
+        text-align: left;
+        line-height: 0.75;
+    }
+    .price__list {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .price__item {
+        display: table-row;
+
+        & td {
+            display: table-cell;
+            padding: 15px 18px;
+            box-sizing: border-box;
+            vertical-align: middle;
+            border: 1px solid #5e5e5e;
+        }
+    }
+    .price__number-service {
+        display: block;
+        width: 70px;
+        color: rgba(255, 255, 255, 0.3);
+        text-align: center;
+    }
+    .price__wash-service {
+        width: 160px;
+        padding-left: 0px;
+        margin: 0;
+    }
+    .price__details {
+        display: none;
+    }
+    .price__name-service {
+        width: 248px;
+    }
+    .price__price-service {
+        width: 160px;
+        text-align: left;
+    }
+    .price__discount {
+        padding-left: 150px;
+        padding-right: 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 30px;
+        line-height: 0.9;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+
+        &::before {
+            top: 25px;
+            left: 35px;
+            transform: scale(1.3)
+        }
+    }
+}
+@media (min-width: @desktop-width) {
+    .price__wrapper {
+        width: 960px;
+    }
+    .price__list {
+        width: 630px;
+        margin-bottom: 0;
+        margin-right: 60px;
+
+        & tbody {
+            width: 630px;
+        }
+    }
+    .price__price-service {
+        width: 150px;
+    }
+    .price__columns {
+        display: flex;
+    }
+    .price__discount  {
+        width: 270px;
+        padding-top: 195px;
+        padding-right: 70px;
+        padding-left: 70px;
+        font-size: 20px;
+        line-height: 1.35;
+        font-weight: normal;
+        text-transform: none;
+
+        &::before {
+            top: 64px;
+            left: 50%;
+            transform: translateX(-50%) scale(2.5);
+        }
+    }
+}

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+        <title>Барбершоп «Бородинский»</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="css/css/normalize.css">
+        <link rel="stylesheet" href="css/css/style.css">
+	</head>
+    <body>
+
+		<header class="page-header">
+			<a class="page-header__logo page-header__logo--inner">
+                <picture>
+                    <source media="(min-width: 1200px)"
+                            srcset="img/logotype-desktop.svg">
+                    <source media="(min-width: 768px)"
+                            srcset="img/logotype-tablet.svg">
+                    <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+                </picture>
+			</a>
+			<nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+				<button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+				<div class="main-nav__wrapper">
+					<ul class="main-nav__list site-list">
+						<li class="site-list__item">
+							<a class="site-list__item-link" href="index.html">Главная</a>
+						</li>
+						<li class="site-list__item site-list__item--active">
+							<a class="site-list__item-link">Наши работы</a>
+						</li>
+						<li class="site-list__item">
+							<a class="site-list__item-link" href="form.html">Записаться</a>
+						</li>
+						<li class="site-list__item">
+							<a class="site-list__item-link" href="#">Контакты</a>
+						</li>
+						<li class="site-list__item">
+							<a class="site-list__item-link" href="#">Инфо</a>
+						</li>
+					</ul>
+					<ul class="main-nav__list user-list">
+						<li class="user-list__item">
+							<a class="user-list__item-link" href="#"><svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg>Вход</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main class="inner-page-main">
+
+			<h1 class="visually-hidden">Барбершоп «Бородинский» - наши работы</h1>
+
+			<section class="works-photo">
+                <div class="works-photo__wrapper">
+                    <h2 class="works-photo__title">Наши работы</h2>
+                    <a class="works-photo__return btn" href="index.html">На главную</a>
+                    <ul class="works-photo__list">
+                        <li class="works-photo__item works-photo__work-of-month">
+                            <blockquote class="works-photo__review">
+                                <div class="works-photo__img-wrapper">
+                                    <picture>
+                                            <source media="(min-width: 1200px)"
+                                                    srcset="img/photo-1-desktop.jpg">
+                                            <source media="(min-width: 768px)"
+                                                    srcset="img/photo-1-tablet.jpg">
+                                            <img class="works-photo__img" src="img/photo-1-mobile.jpg" alt="Пример работы">
+                                    </picture>
+                                    <em class="works-photo__better">Работа месяца</em>
+                                </div>
+                                <div class="works-photo__author">
+                                    <cite class="works-photo__author-name">Лжепётр Мчиславский</cite>
+                                    <p class="works-photo__author-text">Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+                                    <ul class="works-photo__options-list">
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--haircut">Стрижка</li>
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--shaving">Бритьё</li>
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--mustache">Усы</li>
+                                    </ul>
+                                </div>
+                            </blockquote>
+                        </li>
+                        <li class="works-photo__item">
+                            <blockquote class="works-photo__review">
+                                <div class="works-photo__img-wrapper">
+                                    <picture>
+                                        <source media="(min-width: 1200px)"
+                                                srcset="img/photo-2-desktop.jpg">
+                                        <source media="(min-width: 768px)"
+                                                srcset="img/photo-2-tablet.jpg">
+                                        <img class="works-photo__img" src="img/photo-2-mobile.jpg" alt="Пример работы">
+                                    </picture>
+                                </div>
+                                <div class="works-photo__author">
+                                    <cite class="works-photo__author-name">Саша Мальцев</cite>
+                                    <p class="works-photo__author-text">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?</p>
+                                    <ul class="works-photo__options-list">
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--haircut">Стрижка</li>
+                                    </ul>
+                                </div>
+                            </blockquote>
+                        </li>
+                        <li class="works-photo__item">
+                            <blockquote class="works-photo__review">
+                                <div class="works-photo__img-wrapper">
+                                    <picture>
+                                        <source media="(min-width: 1200px)"
+                                                srcset="img/photo-3-desktop.jpg">
+                                        <source media="(min-width: 768px)"
+                                                srcset="img/photo-3-tablet.jpg">
+                                            <img class="works-photo__img" src="img/photo-3-mobile.jpg" alt="Пример работы">
+                                    </picture>
+                                </div>
+                                <div class="works-photo__author">
+                                    <cite class="works-photo__author-name">Владимир Иванович</cite>
+                                    <p class="works-photo__author-text">К зимнему сезону - готов!</p>
+                                    <ul class="works-photo__options-list my-list">
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--shaving">Борода</li>
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--mustache">Усы</li>
+                                    </ul>
+                                </div>
+                            </blockquote>
+                        </li>
+                        <li class="works-photo__item">
+                            <blockquote class="works-photo__review">
+                                <div class="works-photo__img-wrapper">
+                                    <picture>
+                                        <source media="(min-width: 1200px)"
+                                                srcset="img/photo-4-desktop.jpg">
+                                        <source media="(min-width: 768px)"
+                                                srcset="img/photo-4-tablet.jpg">
+                                        <img class="works-photo__img" src="img/photo-4-mobile.jpg" alt="Пример работы">
+                                    </picture>
+                                </div>
+                                <div class="works-photo__author">
+                                    <cite class="works-photo__author-name">Винстон Синий</cite>
+                                    <p class="works-photo__author-text">Как только зарастаю и волосы начинают мешать видеть – бегом в Бородинский!</p>
+                                    <ul class="works-photo__options-list">
+                                        <li class="works-photo__options-list-item works-photo__options-list-item--haircut">Стрижка</li>
+                                    </ul>
+                                </div>
+                            </blockquote>
+                        </li>
+                    </ul>
+                </div>
+			</section>
+            <section class="price">
+                <div class="price__wrapper">
+                    <h2 class="price__heading">Прейскурант</h2>
+                    <div class="price__columns">
+                        <table class="price__list">
+                            <tr class="price__item">
+                                <td class="price__number-service">1</td>
+                                <td class="price__name-service">Классическая стрижка</td>
+                                <td class="price__wash-service">
+                                    <span class="price__details">(</span>
+                                        с мытьём головы
+                                    <span class="price__details">)</span>
+                                </td>
+                                <td class="price__price-service">1 500 руб.</td>
+                            </tr>
+                            <tr class="price__item">
+                                <td class="price__number-service">2</td>
+                                <td class="price__name-service">Современный вариант</td>
+                                <td class="price__wash-service">
+                                    <span class="price__details">(</span>
+                                        с мытьём головы
+                                    <span class="price__details">)</span>
+                                </td>
+                                <td class="price__price-service">1 500 руб.</td>
+                            </tr>
+                            <tr class="price__item">
+                                <td class="price__number-service">3</td>
+                                <td class="price__name-service">Индивидуальный подход</td>
+                                <td class="price__wash-service">
+                                    <span class="price__details">(</span>
+                                        с мытьём головы
+                                    <span class="price__details">)</span>
+                                </td>
+                                <td class="price__price-service">2 000 руб.</td>
+                            </tr>
+                            <tr class="price__item">
+                                <td class="price__number-service">4</td>
+                                <td class="price__name-service">Бритьё бороды</td>
+                                <td class="price__wash-service">
+                                    <span class="price__details">(</span>
+                                    без мытья
+                                    <span class="price__details">)</span>
+                                </td>
+                                <td class="price__price-service">500 руб.</td>
+                            </tr>
+                            <tr class="price__item">
+                                <td class="price__number-service">5</td>
+                                <td class="price__name-service">Бритьё головы</td>
+                                <td class="price__wash-service">
+                                    <span class="price__details">(</span>
+                                        с мытьём головы
+                                    <span class="price__details">)</span>
+                                </td>
+                                <td class="price__price-service">1 000 руб.</td>
+                            </tr>
+                        </table>
+                        <p class="price__discount">С 10:00 до 14:00 скидка 20%</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <div class="page-footer__wrapper">
+                <div class="contacts">
+                    <p class="contacts__address">
+                        <b class="contacts__title">Барбершоп Бородинский</b>
+                        г. Санкт-Петербург, ул. Большая<br> Конюшенная 19/8<br>
+                        <a class="contacts__phone-number btn" href="tel:+78125556666">
+                            <span class="contacts__phone-abbr">Тел.:</span>
+                            +7 (812) 555-66-65<br>
+                        </a>
+                    </p>
+                </div>
+                <div class="social">
+                    <b class="social__friends">Давайте дружить!</b>
+                    <a class="social__link social__link--vk" href="#">Мы Вконтакте</a>
+                    <a class="social__link social__link--fb" href="#">Мы в Фейсбуке</a>
+                    <a class="social__link social__link--in" href="#">Мы в инстаграме</a>
+                </div>
+                <div class="copyright">
+                    <b class="copyright__dev">Разработано:</b>
+                    <a class="copyright__dev-link btn" href="#">HTML ACADEMY</a>
+                </div>
+            </div>
+        </footer>
+            <!-- <section class="modal modal-login">
+                <h2 class="modal-login__title">Личный кабинет</h2>
+                <p class="modal-login__descroption">Введите свой логин и пароль, чтобы</p>
+                <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+                    <p>
+                        <label class="modal-login__label" for="user-name">Логин</label>
+                        <input class="modal-login__user-login" type="text" name="user-name" id="user-name" placeholder="Логин" required>
+                    </p>
+                    <p>
+                        <label class="modal-login__label" for="password">Пароль</label>
+                        <input class="modal-login__user-password" type="password" name="password" id="password" placeholder="Пароль" required>
+                    </p>
+                    <p>
+                        <label for="">
+                            <span class="modal-login__checkbox-indicator"></span>
+                            <input type="checkbox" name="remember" id="">
+                        </label>
+                    </p>
+                </form>
+            </section> -->
+        <script>
+            var navMain = document.querySelector(".main-nav");
+            var navToggle = document.querySelector(".main-nav__toggle");
+
+            navMain.classList.remove("main-nav--nojs");
+
+            navToggle.addEventListener("click", function() {
+            if (navMain.classList.contains("main-nav--closed")) {
+                navMain.classList.remove("main-nav--closed");
+                navMain.classList.add("main-nav--opened");
+            } else {
+                navMain.classList.add("main-nav--closed");
+                navMain.classList.remove("main-nav--opened");
+
+            }
+            });
+        </script>
+        <script src="js/picturefill.min.js"></script>
+	</body>
+</html>
