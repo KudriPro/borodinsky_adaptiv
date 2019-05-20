@@ -16,7 +16,7 @@
 
 <table>
   <tr>
-  <th><a href=" https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 1200</a></th>
+  <th><a href="https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 1200</a></th>
   <th><a href="https://kudripro.github.io/borodinsky_adaptiv/photo.html">Страница наши работы 1200</a></th>
   </tr>
   <tr valign="top">
@@ -32,7 +32,7 @@
     </td>
   </tr>
   <tr>
-  <th><a href=" https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 768</a></th>
+  <th><a href="https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 768</a></th>
   <th><a href="https://kudripro.github.io/borodinsky_adaptiv/photo.html">Страница наши работы 768</a></th>
   </tr>
   <tr valign="top">
@@ -46,7 +46,7 @@
     </td>
   </tr>
   <tr>
-  <th><a href=" https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 320</a></th>
+  <th><a href="https://kudripro.github.io/borodinsky_adaptiv/index.html">Главная страница 320</a></th>
   <th><a href="https://kudripro.github.io/borodinsky_adaptiv/photo.html">Страница наши работы 320</a></th>
   </tr>
    <tr valign="top">
