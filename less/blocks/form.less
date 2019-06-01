@@ -14,9 +14,9 @@
         position: absolute;
         content: "";
         width: 100%;
-        height: 35px;
+        height: 36px;
         left: 0;
-        bottom: -35px;
+        bottom: -34px;
         background: url("../../img/corner-light.svg") no-repeat;
         transform: scaleY(-1);
         background-size: 100% 35px;
@@ -73,9 +73,6 @@
         &:focus {
             border-color: #999999;
         }
-        &:invalid {
-            border-color: #d36549;
-        }
     }
 }
 .form__name-container {
@@ -102,6 +99,12 @@
         }
         &:-ms-input-placeholder {
             color: #000000;
+        }
+        &:hover {
+            border-color: #d5c9bd;
+        }
+        &:focus {
+            border-color: #999999;
         }
     }
 }
@@ -180,6 +183,9 @@
     & input[type="radio"]:checked + .radio-indicator::before {
         position: absolute;
         content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 17px;
         height: 17px;
         border-radius: 50%;
@@ -251,7 +257,56 @@
     color: #ffffff;
     background-color: #826550;
 }
+.form__modal {
+    display: none;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 50px 20px;
+    width: 60%;
+    min-width: 320px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.75);
+    z-index: 3;
+}
+.form__modal.form__submitted--open {
+    display: block
+}
+.form__no-submitted-title,
+.form__submitted-title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.form__no-submitted-text,
+.form__submitted-text{
+    width: 280px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.form__no-submitted-btn,
+.form__submitted-btn {
+    padding-left: 80px;
+    padding-right: 80px;
+    color: #ffffff;
+    background-color: #826550;
 
+    &:hover,
+    &:focus {
+        background-color: #6a4d38;
+    }
+    &:active {
+        color: rgba(255, 255, 255, 0.3)
+    }
+}
 @media (min-width: @tablet-width) {
     .form {
         position: relative;
@@ -400,6 +455,9 @@
             background-color: #aeaeae;
             pointer-events: none;
         }
+    }
+    .form__modal {
+        width: 460px;
     }
 }
 @media (min-width:@desktop-width) {

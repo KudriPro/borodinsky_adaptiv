@@ -8,6 +8,16 @@
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="css/css/normalize.css">
         <link rel="stylesheet" href="css/css/style.css">
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+	    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico">
+        <meta property="og:title" content="Барбершоп «Бородинский» - истинно мужская классика">
+        <meta property="og:description" content="Быстрые, стильные стрижки от профессионалов своего дела">
+        <!-- 	<meta property="og:type" content="article"> -->
+        <!-- 	<meta property="og:url" content="#"> -->
+        <!-- 	<meta property="og:site_name" content="Название сайта хранистя в системных файлах"> -->
+        <meta property="og:image" content="img/travis_desktop.jpg">
+        <meta property="og:image:width" content="249">
+        <meta property="og:image:height" content="160">
 	</head>
     <body>
 
@@ -35,7 +45,7 @@
 							<a class="site-list__item-link">Записаться</a>
 						</li>
 						<li class="site-list__item">
-							<a class="site-list__item-link" href="#">Контакты</a>
+							<a class="site-list__item-link" href="#contacts">Контакты</a>
 						</li>
 						<li class="site-list__item">
 							<a class="site-list__item-link" href="#">Инфо</a>
@@ -55,140 +65,150 @@
 			<h1 class="visually-hidden">Барбершоп «Бородинский» - записаться на стрижку</h1>
 
 			<section class="form">
-                <div class="form__wrapper">
-                    <h2 class="form__title">Запись на стрижку</h2>
-                    <a class="form__return btn" href="index.html">На главную</a>
-                    <form class="form__inner" method="post" action="https://echo.htmlacademy.ru">
-                        <fieldset class="form__field form__field--person">
-                            <legend class="visually-hidden">Контактые данные:</legend>
-                            <div class="form__name-container">
-                                <label>
-                                    <span class="visually-hidden">Имя</span>
-                                    <input type="text" name="name" id="name" placeholder="Имя">
-                                </label>
-                                <label>
-                                    <span class="visually-hidden">Фамилия</span>
-                                    <input type="text" name="surname" id="surname" placeholder="Фамилия">
-                                </label>
-                                <label>
-                                    <span class="visually-hidden">Отчество</span>
-                                    <input type="text" name="patronymic" id="patronymic" placeholder="Отчество">
-                                </label>
-                            </div>
-                            <div class="form__contacts-container">
-                                <label>
-                                    <span class="visually-hidden">Контактный телефон</span>
-                                    <input type="tel" name="tel" id="tel" placeholder="Контактный телефон">
-                                </label>
-                                <label>
-                                    <span class="visually-hidden">Контактный e-mail</span>
-                                    <input type="email" name="e-mail" id="e-mail" placeholder="Контактный e-mail">
-                                </label>
-                            </div>
-                            <div class="form__comment-container">
-                                <textarea name="comment" id="comment" placeholder="Доп. информация для мастера"></textarea>
-                            </div>
-                        </fieldset>
-                        <fieldset class="form__field form__field--beard">
-                            <legend>Выберите модель бороды:</legend>
-                            <ul class="form__radio-list">
-                                <li class="form__model-item">
+                    <div class="form__wrapper">
+                        <h2 class="form__title">Запись на стрижку</h2>
+                        <a class="form__return btn" href="index.html">На главную</a>
+                        <form class="form__inner" method="post" action="https://echo.htmlacademy.ru">
+                            <fieldset class="form__field form__field--person">
+                                <legend class="visually-hidden">Контактые данные:</legend>
+                                <div class="form__name-container">
                                     <label>
-                                        адмирал
-                                        <input type="radio" name="beard-model" value="admiral" checked>
-                                        <span class="radio-indicator"></span>
+                                        <span class="visually-hidden">Имя</span>
+                                        <input type="text" name="name" id="name" placeholder="Имя" required>
                                     </label>
-                                    <img src="img/beard-1.svg" alt="Тип бороды">
-                                </li>
-                                <li class="form__model-item">
                                     <label>
-                                        лусоруб
-                                        <input type="radio" name="beard-model" value="lumberjack">
-                                        <span class="radio-indicator"></span>
+                                        <span class="visually-hidden">Фамилия</span>
+                                        <input type="text" name="surname" id="surname" placeholder="Фамилия">
                                     </label>
-                                    <img src="img/beard-2.svg" alt="Тип бороды">
-                                </li>
-                                <li class="form__model-item">
                                     <label>
-                                        полярник
-                                        <input type="radio" name="beard-model" value="polar">
-                                        <span class="radio-indicator"></span>
+                                        <span class="visually-hidden">Отчество</span>
+                                        <input type="text" name="patronymic" id="patronymic" placeholder="Отчество">
                                     </label>
-                                    <img src="img/beard-3.svg" alt="Тип бороды">
-                                </li>
-                                <li class="form__model-item">
+                                </div>
+                                <div class="form__contacts-container">
                                     <label>
-                                        боярин
-                                        <input type="radio" name="beard-model" value="boyar">
-                                        <span class="radio-indicator"></span>
+                                        <span class="visually-hidden">Контактный телефон</span>
+                                        <input type="tel" name="tel" id="tel" placeholder="Контактный телефон" required>
                                     </label>
-                                    <img src="img/beard-4.svg" alt="Тип бороды">
-                                </li>
-                                <li class="form__model-item">
                                     <label>
-                                        мудрец
-                                        <input type="radio" name="beard-model" value="sage">
-                                        <span class="radio-indicator"></span>
+                                        <span class="visually-hidden">Контактный e-mail</span>
+                                        <input type="email" name="e-mail" id="e-mail" placeholder="Контактный e-mail">
                                     </label>
-                                    <img src="img/beard-5.svg" alt="Тип бороды">
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class="form__field form__field--services">
-                            <legend>Дополнительные услуги:</legend>
-                            <ul class="form__services-list">
+                                </div>
+                                <div class="form__comment-container">
+                                    <textarea name="comment" id="comment" placeholder="Доп. информация для мастера"></textarea>
+                                </div>
+                            </fieldset>
+                            <fieldset class="form__field form__field--beard">
+                                <legend>Выберите модель бороды:</legend>
+                                <ul class="form__radio-list">
+                                    <li class="form__model-item">
+                                        <label>
+                                            адмирал
+                                            <input type="radio" name="beard-model" value="admiral" checked>
+                                            <span class="radio-indicator"></span>
+                                        </label>
+                                        <img src="img/beard-1.svg" alt="Тип бороды">
+                                    </li>
+                                    <li class="form__model-item">
+                                        <label>
+                                            лусоруб
+                                            <input type="radio" name="beard-model" value="lumberjack">
+                                            <span class="radio-indicator"></span>
+                                        </label>
+                                        <img src="img/beard-2.svg" alt="Тип бороды">
+                                    </li>
+                                    <li class="form__model-item">
+                                        <label>
+                                            полярник
+                                            <input type="radio" name="beard-model" value="polar">
+                                            <span class="radio-indicator"></span>
+                                        </label>
+                                        <img src="img/beard-3.svg" alt="Тип бороды">
+                                    </li>
+                                    <li class="form__model-item">
+                                        <label>
+                                            боярин
+                                            <input type="radio" name="beard-model" value="boyar">
+                                            <span class="radio-indicator"></span>
+                                        </label>
+                                        <img src="img/beard-4.svg" alt="Тип бороды">
+                                    </li>
+                                    <li class="form__model-item">
+                                        <label>
+                                            мудрец
+                                            <input type="radio" name="beard-model" value="sage">
+                                            <span class="radio-indicator"></span>
+                                        </label>
+                                        <img src="img/beard-5.svg" alt="Тип бороды">
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="form__field form__field--services">
+                                <legend>Дополнительные услуги:</legend>
+                                <ul class="form__services-list">
+                                    <li class="form__services-item">
+                                        <label>
+                                            Подкрасить бороду
+                                            <input type="checkbox" name="service" value="service-1" id="service-1" checked>
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
                                 <li class="form__services-item">
-                                    <label>
-                                        Подкрасить бороду
-                                        <input type="checkbox" name="service" value="service-1" id="service-1" checked>
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                               <li class="form__services-item">
-                                    <label>
-                                        Причесать бороду
-                                        <input type="checkbox" name="service" value="service-2" id="service-2" checked>
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                                <li class="form__services-item">
-                                    <label>
-                                        Убрать седину
-                                        <input type="checkbox" name="service" value="service-3" id="service-3">
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                                <li class="form__services-item">
-                                    <label>
-                                        Накрутить усы
-                                        <input type="checkbox" name="service" value="service-4" id="service-4">
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                                <li class="form__services-item">
-                                    <label>
-                                        Подровнять виски
-                                        <input type="checkbox" name="service" value="service-5" id="service-5">
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                                <li class="form__services-item">
-                                    <label>
-                                        Отполировать лысину
-                                        <input type="checkbox" name="service" value="service-6" id="service-6">
-                                        <span class="checkbox-indicator"></span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <input class="form__apply btn" type="submit" value="Отправить заявку">
-                    </form>
-                </div>
-			</section>
+                                        <label>
+                                            Причесать бороду
+                                            <input type="checkbox" name="service" value="service-2" id="service-2" checked>
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
+                                    <li class="form__services-item">
+                                        <label>
+                                            Убрать седину
+                                            <input type="checkbox" name="service" value="service-3" id="service-3">
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
+                                    <li class="form__services-item">
+                                        <label>
+                                            Накрутить усы
+                                            <input type="checkbox" name="service" value="service-4" id="service-4">
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
+                                    <li class="form__services-item">
+                                        <label>
+                                            Подровнять виски
+                                            <input type="checkbox" name="service" value="service-5" id="service-5">
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
+                                    <li class="form__services-item">
+                                        <label>
+                                            Отполировать лысину
+                                            <input type="checkbox" name="service" value="service-6" id="service-6">
+                                            <span class="checkbox-indicator"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <input class="form__apply btn" type="submit" value="Отправить заявку">
+                        </form>
+                    </div>
+            </section>
+            <div class="form__modal form__no-submitted">
+                <b class="form__no-submitted-title">Неудача</b>
+                <p class="form__no-submitted-text">Что-то пошло не так. Проверьте выделенные красным поля формы.</p>
+                <button class="form__no-submitted-btn btn">Ок</button>
+            </div>
+            <div class="form__modal form__submitted">
+                <b class="form__submitted-title">Это удача</b>
+                <p class="formform__submitted-text">Ваша заявка отправлена. Ожидайте, мы свяжемся с вами как только будет минутка.</p>
+                <button class="form__submitted-btn btn">Закрыть окно</button>
+            </div>
         </main>
         <footer class="page-footer">
             <div class="page-footer__wrapper">
-                <div class="contacts">
+                <div class="contacts" id="contacts">
                     <p class="contacts__address">
                         <b class="contacts__title">Барбершоп Бородинский</b>
                         г. Санкт-Петербург, ул. Большая<br> Конюшенная 19/8<br>
@@ -210,26 +230,32 @@
                 </div>
             </div>
         </footer>
-            <!-- <section class="modal modal-login">
-                <h2 class="modal-login__title">Личный кабинет</h2>
-                <p class="modal-login__descroption">Введите свой логин и пароль, чтобы</p>
-                <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
-                    <p>
-                        <label class="modal-login__label" for="user-name">Логин</label>
-                        <input class="modal-login__user-login" type="text" name="user-name" id="user-name" placeholder="Логин" required>
-                    </p>
-                    <p>
-                        <label class="modal-login__label" for="password">Пароль</label>
-                        <input class="modal-login__user-password" type="password" name="password" id="password" placeholder="Пароль" required>
-                    </p>
-                    <p>
-                        <label for="">
-                            <span class="modal-login__checkbox-indicator"></span>
-                            <input type="checkbox" name="remember" id="">
-                        </label>
-                    </p>
-                </form>
-            </section> -->
+        <section class="modal-login modal-login--closed">
+            <h2 class="modal-login__title">Личный кабинет</h2>
+            <p class="modal-login__descroption">Введите свой логин и пароль, чтобы войти</p>
+            <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label class="modal-login__label visually-hidden" for="user-name">Логин</label>
+                    <input class="modal-login__user-login" type="text" name="user-name" id="user-name" placeholder="Логин" required>
+                </p>
+                <p>
+                    <label class="modal-login__label visually-hidden" for="password">Пароль</label>
+                    <input class="modal-login__user-password" type="password" name="password" id="password" placeholder="Пароль" required>
+                </p>
+                <p>
+                    <label class="modal-login__label" for="remember">
+                        <input type="checkbox" name="remember" id="remember">
+                        <span class="modal-login__checkbox-indicator"></span>
+                        Запомните меня
+                    </label>
+                    <a class="modal-login__restore" href="#">Я забыл пароль!</a>
+                </p>
+                <p class="modal-login__btn-group">
+                    <button class="modal-login__submit btn" type="submit">Войти <span>в личный кабинет<span></button>
+                    <button class="modal-login__close btn" type="button">Закрыть</button>
+                </p>
+            </form>
+        </section>
         <script>
             var navMain = document.querySelector(".main-nav");
             var navToggle = document.querySelector(".main-nav__toggle");
@@ -248,5 +274,6 @@
             });
         </script>
         <script src="js/picturefill.min.js"></script>
+        <script src="js/popup.js"></script>
 	</body>
 </html>
