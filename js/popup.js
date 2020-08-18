@@ -1,22 +1,21 @@
-// Личный кабинет //
-var login = document.querySelector(".user-list__item-link");
-var modalLogin = document.querySelector(".modal-login");
-var modalLoginClose = document.querySelector(".modal-login__close");
-var loginName = modalLogin.querySelector("[name=user-name]");
+// Personal Area
+let login = document.querySelector(".user-list__item-link");
+let modalLogin = document.querySelector(".modal-login");
+let modalLoginClose = document.querySelector(".modal-login__close");
+let loginName = modalLogin.querySelector("[name=user-name]");
 
-//Отправка формы//
-var formApply = document.querySelector(".form__apply");
-var formSubmitted = document.querySelector(".form__submitted");
-var formSubmittedClose = document.querySelector(".form__submitted-btn");
+//Submit form
+let formApply = document.querySelector(".form__apply");
+let formSubmitted = document.querySelector(".form__submitted");
+let formSubmittedClose = document.querySelector(".form__submitted-btn");
 
-//Галерея//
-var reviewButtonNext = document.querySelector(".reviews__next");
-var reviewButtonBack = document.querySelector(".reviews__prev");
-var blockquote = document.querySelectorAll(".reviews__list blockquote");
-var input = document.querySelectorAll("[name=reviews]");
-var i = 0;
+//Gallery
+let reviewButtonNext = document.querySelector(".reviews__next");
+let reviewButtonBack = document.querySelector(".reviews__prev");
+let blockquote = document.querySelectorAll(".reviews__list blockquote");
 
-// Личный кабинет //
+
+// Personal Area
   login.addEventListener("click", function() {
     navMain.classList.remove("main-nav--opened");
     navMain.classList.add("main-nav--closed");
@@ -35,41 +34,70 @@ var i = 0;
         modalLogin.classList.add("modal-login--closed");
     });
 
+//Gallery
+const gallery = () => {
+    let sliderTabs= document.querySelectorAll(".slider__toggle--gray");
+    let i = 0;
 
-//Галерея //
-// reviewButtonNext.onclick =  function() {
-//     blockquote[i].style.display = "none";
-//     if (i < blockquote.length -1) {
-//         i = i + 1;
-//     }
-//     else {
-//         i = 0;
+    const removeClass = () => {
+        for (const q of blockquote) {
+            q.classList.remove("reviews__item--active");
+        }
+    };
+    const removeActiveClass = () => {
+        blockquote[i].classList.remove("reviews__item--active");
+        sliderTabs[i].classList.remove("slider__toggle--target");
+    };
+    const addActiveClass = () => {
+        blockquote[i].classList.add("reviews__item--active");
+        sliderTabs[i].classList.add("slider__toggle--target");
+    };
 
-//     }
-//     blockquote[i].style.display = "block";
-// }
-reviewButtonNext.onclick =  function() {
-    blockquote[i].style.display = "none";
-    i = i + 1;
-	if (i >= blockquote.length) {
-		i = 0;
-	}
+    sliderTabs.forEach(function(elem){
+        elem.addEventListener("click", function(){
+            removeClass();
+            for (const tab of sliderTabs) {
+                tab.classList.remove("slider__toggle--target");
+            }
+            this.classList.add("slider__toggle--target");
+            let tabId = this.dataset.tab;
+            let tabSlider = document.querySelector(`#${tabId}`);
 
-    blockquote[i].style.display = "block";
-}
-reviewButtonBack.onclick = function() {
-    blockquote[i].style.display = "none";
-	i = i - 1;
+            tabSlider.classList.add("reviews__item--active");
+            let arr = Array.prototype.slice.call(blockquote);
+            i = arr.indexOf(tabSlider);
+        });
 
-	if(i < 0) {
-		i = blockquote.length - 1;
-	}
+    });
 
-    blockquote[i].style.display = "block";
-    // input[i].setAttribute("checked", "");
-}
+    reviewButtonNext.onclick =  function() {
+        removeClass();
+        removeActiveClass();
+        i = i + 1;
+        if (i >= blockquote.length) {
+            i = 0;
+        }
 
-//Отправка формы//
+        addActiveClass();
+    }
+
+    reviewButtonBack.onclick = function() {
+        removeClass();
+        removeActiveClass();
+        i = i - 1;
+
+        if(i < 0) {
+            i = blockquote.length - 1;
+        }
+
+        addActiveClass();
+    }
+};
+
+gallery();
+
+
+//Submit form
 formApply.addEventListener("click", function(event) {
     event.preventDefault();
     formSubmitted.classList.add("form__submitted--open");

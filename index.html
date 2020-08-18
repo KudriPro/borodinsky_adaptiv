@@ -171,7 +171,7 @@
                     <input class="slider__input-2" type="radio" name="reviews" id="reviews-input-2">
                     <input class="slider__input-3" type="radio" name="reviews" id="reviews-input-3">
 					<div class="reviews__list slider__list">
-						<blockquote class="reviews__item reviews__item-1 slider__item-1">
+						<blockquote class="toster reviews__item reviews__item-1 reviews__item--active" id="tab-1">
 							<div class="reviews__author-picture">
 								<picture>
                                     <source media="(min-width:1200px)"
@@ -190,7 +190,7 @@
 							<cite class="reviews__author">Трэвис Баркер</cite>
 							<p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
 						</blockquote>
-						<blockquote class="reviews__item reviews__item-2 slider__item-2">
+						<blockquote class="reviews__item reviews__item-2" id="tab-2">
 							<div class="reviews__author-picture">
                                 <picture>
                                         <source media="(min-width:1200px)"
@@ -208,7 +208,7 @@
 							<cite class="reviews__author">Джон Смит</cite>
 							<p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
 						</blockquote>
-						<blockquote class="reviews__item reviews__item-3 slider__item-3">
+						<blockquote class="reviews__item reviews__item-3" id="tab-3">
 							<div class="reviews__author-picture">
                                 <picture>
                                         <source media="(min-width:1200px)"
@@ -221,18 +221,18 @@
                                             src="img/boroda_77x51.jpg"
                                             srcset="img/boroda_mx2.jpg 2x"
                                             alt="Фото Ивана Бородайло">
-                                    </picture>
+                                </picture>
 							</div>
 							<cite class="reviews__author">Иван Бородайло</cite>
 							<p class="reviews__text">В Бородинском ваша борода в надежных руках!</p>
                         </blockquote>
                         <button class="reviews__prev" type="button">Предыдущий отзыв</button>
                         <button class="reviews__next" type="button">Следующий отзыв</button>
-                    </div>
-                    <div class="reviews__toggles slider__toggles">
-                        <label class="slider__toggle slider__toggle--gray slider__toggle-1" for="reviews-input-1">1</label>
-                        <label class="slider__toggle slider__toggle--gray slider__toggle-2" for="reviews-input-2">2</label>
-                        <label class="slider__toggle slider__toggle--gray slider__toggle-3" for="reviews-input-3">3</label>
+                        <div class="reviews__toggles">
+                            <label class="twister slider__toggle slider__toggle--gray slider__toggle--target" for="reviews-input-1" data-tab="tab-1">1</label>
+                            <label class="slider__toggle slider__toggle--gray" for="reviews-input-2" data-tab="tab-2">2</label>
+                            <label class="slider__toggle slider__toggle--gray" for="reviews-input-3" data-tab="tab-3">3</label>
+                        </div>
                     </div>
                     <a class="reviews__write btn" href="#">Оставить свой</a>
 				</div>
@@ -305,8 +305,8 @@
             }
             });
         </script>
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-3.3.1.min.js"></script>
         <script src="slick/slick.min.js"></script>
         <!-- <script type="text/javascript">
               $('.advantages__list').slick({
