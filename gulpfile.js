@@ -16,9 +16,7 @@ gulp.task("less", function () {
     return gulp.src("less/style.less")
         .pipe(less())
         .pipe(postcss([
-            autoprefixer({browsers: [
-              "last 2 versions"
-            ]}),
+            autoprefixer(),
           ]))
         .pipe(gulp.dest("css/css"))
         .pipe(cleanCSS({
